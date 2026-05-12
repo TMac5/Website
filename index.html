@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-gradient"></div>
+    
+    <nav class="navbar glass">
+        <div class="logo">
+            <h1>Dashboard</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#calculators">Calculators</a></li>
+            <li><a href="#reminders">Reminders</a></li>
+            <li><a href="#notes">Notes</a></li>
+            <li><a href="#more">More</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <!-- Home Section -->
+        <section id="home" class="section active-section">
+            <div class="welcome-card glass">
+                <h2>Welcome to Your Personal Dashboard</h2>
+                <p>Your all-in-one workspace for calculators, reminders, notes, and more.</p>
+                <div class="quick-actions">
+                    <button class="action-btn glass" onclick="navigateTo('calculators')">
+                        <span class="icon">🧮</span>
+                        <span>Calculators</span>
+                    </button>
+                    <button class="action-btn glass" onclick="navigateTo('reminders')">
+                        <span class="icon">⏰</span>
+                        <span>Reminders</span>
+                    </button>
+                    <button class="action-btn glass" onclick="navigateTo('notes')">
+                        <span class="icon">📝</span>
+                        <span>Notes</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card glass">
+                    <h3>Quick Stats</h3>
+                    <p>Track your activity and productivity</p>
+                </div>
+                <div class="stat-card glass">
+                    <h3>Recent Activity</h3>
+                    <p>Your latest actions and updates</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculators Section -->
+        <section id="calculators" class="section">
+            <div class="section-header glass">
+                <h2>Calculators</h2>
+                <p>Choose from various calculator tools</p>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card glass">
+                    <h3>Standard Calculator</h3>
+                    <p>Basic arithmetic operations</p>
+                    <button class="tool-btn" onclick="openTool('standard-calc')">Open</button>
+                </div>
+                <div class="tool-card glass">
+                    <h3>Scientific Calculator</h3>
+                    <p>Advanced mathematical functions</p>
+                    <button class="tool-btn" onclick="openTool('scientific-calc')">Open</button>
+                </div>
+                <div class="tool-card glass">
+                    <h3>Unit Converter</h3>
+                    <p>Convert between different units</p>
+                    <button class="tool-btn" onclick="openTool('unit-converter')">Open</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reminders Section -->
+        <section id="reminders" class="section">
+            <div class="section-header glass">
+                <h2>Reminders</h2>
+                <p>Never miss an important task or event</p>
+            </div>
+            <div class="reminder-input glass">
+                <input type="text" id="reminder-text" placeholder="Enter your reminder...">
+                <input type="datetime-local" id="reminder-time">
+                <button class="add-btn" onclick="addReminder()">Add Reminder</button>
+            </div>
+            <div id="reminders-list" class="reminders-list">
+                <!-- Reminders will be added here dynamically -->
+            </div>
+        </section>
+
+        <!-- Notes Section -->
+        <section id="notes" class="section">
+            <div class="section-header glass">
+                <h2>Notes</h2>
+                <p>Capture your thoughts and ideas</p>
+            </div>
+            <div class="note-input glass">
+                <input type="text" id="note-title" placeholder="Note title...">
+                <textarea id="note-content" placeholder="Write your note here..."></textarea>
+                <button class="add-btn" onclick="addNote()">Create Note</button>
+            </div>
+            <div id="notes-grid" class="notes-grid">
+                <!-- Notes will be added here dynamically -->
+            </div>
+        </section>
+
+        <!-- More Section -->
+        <section id="more" class="section">
+            <div class="section-header glass">
+                <h2>More Tools</h2>
+                <p>Additional features coming soon</p>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card glass">
+                    <h3>Coming Soon</h3>
+                    <p>More tools will be added based on your needs</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer glass">
+        <p>&copy; 2024 Personal Dashboard. Built with HTML, CSS & JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
